@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Marvel Characters</string>
+    <string name="no_connection_error">Los superheroes solo se ven con una super conexión. Comprueba tu red e inténtalo de nuevo.</string>
+    <string name="generic_error">Hemos tenido un super problema al obtener los datos, pueba otra vez.</string>
+    <string name="reintantar">Reintentar</string>
+
+    <string name="description_character_img">Character image</string>
+    <string name="comics_available">Comics disponibles: %d</string>
+    <string name="events_available">Eventos disponibles: %d</string>
+    <string name="series_available">Series disponibles: %d</string>
+    <string name="stories_available">Historias disponibles: %d</string>
+
+</resources>
