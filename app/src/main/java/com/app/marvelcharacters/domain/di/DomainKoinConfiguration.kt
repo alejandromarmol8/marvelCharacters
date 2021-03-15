@@ -1,7 +1,7 @@
 package com.app.marvelcharacters.domain.di
 
-import com.app.marvelcharacters.domain.GetCharacter
-import com.app.marvelcharacters.domain.GetCharacters
+import com.app.marvelcharacters.domain.usecases.GetCharacter
+import com.app.marvelcharacters.domain.usecases.GetCharacters
 import org.koin.dsl.module
 
 class DomainKoinConfiguration {

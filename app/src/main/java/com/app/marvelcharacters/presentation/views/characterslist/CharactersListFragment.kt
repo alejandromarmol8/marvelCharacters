@@ -1,16 +1,16 @@
-package com.app.marvelcharacters.presentation.views.selection
+package com.app.marvelcharacters.presentation.views.characterslist
 
 import com.app.marvelcharacters.R
 import com.app.marvelcharacters.databinding.SelectionFragmentBinding
 import com.app.marvelcharacters.presentation.views.bases.BaseFragment
-import com.app.marvelcharacters.presentation.views.details.DetailFragment
+import com.app.marvelcharacters.presentation.views.characterdetail.CharacterDetailFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class SelectionFragment: BaseFragment<SelectionFragmentBinding>() ,
-    CharactersAdapter.OnDetailClickedListener {
+class CharactersListFragment: BaseFragment<SelectionFragmentBinding>() ,
+    CharactersListAdapter.OnDetailClickedListener {
 
     override fun getFragmentBinding(): SelectionFragmentBinding = SelectionFragmentBinding.inflate(layoutInflater)
-    override val viewModel: SelectionViewModel by viewModel()
+    override val viewModel: CharactersListViewModel by viewModel()
 
     override fun initViews() {
         super.initViews()
@@ -19,12 +19,12 @@ class SelectionFragment: BaseFragment<SelectionFragmentBinding>() ,
 
     override fun initObservers() {
         viewModel.characters.observe(this, {
-            binding.charactersRecycler.adapter = CharactersAdapter(it, this)
+            binding.charactersRecycler.adapter = CharactersListAdapter(it, this)
         })
     }
 
     override fun goToDetail(id: Int) {
-        navigateTo(R.id.action_selection_fragment_to_detailFragment, DetailFragment.createBundle(id))
+        navigateTo(R.id.action_selection_fragment_to_detailFragment, CharacterDetailFragment.createBundle(id))
     }
 
 }

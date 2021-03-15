@@ -1,15 +1,15 @@
-package com.app.marvelcharacters.presentation.views.details
+package com.app.marvelcharacters.presentation.views.characterdetail
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.app.marvelcharacters.data.detaildata.CharacterDetailData
 import com.app.marvelcharacters.domain.CharactersResultFailure
-import com.app.marvelcharacters.domain.GetCharacter
+import com.app.marvelcharacters.domain.usecases.GetCharacter
 import com.app.marvelcharacters.presentation.views.bases.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class DetailViewModel(private val getRepoCharacters: GetCharacter) : BaseViewModel() {
+class CharacterDetailViewModel(private val getRepoCharacters: GetCharacter) : BaseViewModel() {
 
     val descriptionCharacter = MutableLiveData<CharacterDetailData>()
     private var lastCharacterTried : Int = 0

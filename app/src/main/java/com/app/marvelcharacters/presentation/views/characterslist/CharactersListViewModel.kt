@@ -1,15 +1,15 @@
-package com.app.marvelcharacters.presentation.views.selection
+package com.app.marvelcharacters.presentation.views.characterslist
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.app.marvelcharacters.data.charactersdata.CharacterData
 import com.app.marvelcharacters.domain.CharactersResultFailure
-import com.app.marvelcharacters.domain.GetCharacters
+import com.app.marvelcharacters.domain.usecases.GetCharacters
 import com.app.marvelcharacters.presentation.views.bases.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class SelectionViewModel(private val getRepoCharacters: GetCharacters) : BaseViewModel() {
+class CharactersListViewModel(private val getRepoCharacters: GetCharacters) : BaseViewModel() {
 
     val characters = MutableLiveData<List<CharacterData>>()
 

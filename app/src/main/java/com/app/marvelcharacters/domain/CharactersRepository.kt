@@ -1,7 +1,7 @@
 package com.app.marvelcharacters.domain
 
-import com.app.marvelcharacters.data.charactersdata.CharacterData
 import com.app.marvelcharacters.data.ParsedResponse
+import com.app.marvelcharacters.data.charactersdata.CharacterData
 import com.app.marvelcharacters.data.detaildata.CharacterDetailData
 import com.app.marvelcharacters.domain.CharactersResultFailure.*
 

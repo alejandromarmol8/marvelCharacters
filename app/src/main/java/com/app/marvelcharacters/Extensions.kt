@@ -1,12 +1,11 @@
 package com.app.marvelcharacters
 
-import android.widget.ImageView
-import androidx.fragment.app.Fragment
+import androidx.appcompat.widget.AppCompatImageView
 import com.squareup.picasso.Picasso
 
-fun Fragment.loadImage(path: String, extension: String, imageView: ImageView){
-        var newpath = path
+fun AppCompatImageView.loadImage(path: String, extension: String){
+        var newPath = path
         if(path.startsWith("http://"))
-            newpath = path.replace("http", "https")
-        Picasso.get().load(newpath.plus(".").plus(extension)).into(imageView)
+            newPath = path.replace("http", "https")
+        Picasso.get().load(newPath.plus(".").plus(extension)).into(this)
 }

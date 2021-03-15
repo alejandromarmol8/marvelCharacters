@@ -1,4 +1,4 @@
-package com.app.marvelcharacters.presentation.views.details
+package com.app.marvelcharacters.presentation.views.characterdetail
 
 import androidx.core.os.bundleOf
 import com.app.marvelcharacters.R
@@ -7,9 +7,9 @@ import com.app.marvelcharacters.loadImage
 import com.app.marvelcharacters.presentation.views.bases.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class DetailFragment : BaseFragment<DetailFragmentBinding>() {
+class CharacterDetailFragment : BaseFragment<DetailFragmentBinding>() {
 
-    override val viewModel: DetailViewModel by viewModel()
+    override val viewModel: CharacterDetailViewModel by viewModel()
     override fun getFragmentBinding(): DetailFragmentBinding = DetailFragmentBinding.inflate(layoutInflater)
 
     companion object {
@@ -29,7 +29,7 @@ class DetailFragment : BaseFragment<DetailFragmentBinding>() {
                 binding.apply {
                     name.text = cdd.name
                     description.text = cdd.description
-                    loadImage(cdd.thumbnail.path, cdd.thumbnail.extension, thumbnail)
+                    thumbnail.loadImage(cdd.thumbnail.path, cdd.thumbnail.extension)
                     comicsAvailable.text = getString(R.string.comics_available, cdd.comics.available)
                     storiesAvailable.text = getString(R.string.stories_available, cdd.stories.available)
                     seriesAvailable.text = getString(R.string.series_available, cdd.series.available)
